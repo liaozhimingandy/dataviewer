@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+	<!-- Bootstrap CSS -->
+	<link href="plugins/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="plugins/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="dist/css/adminlte.min.css" rel="stylesheet">
+	<link href="dist/css/app.css" rel="stylesheet">
+	<title>大屏数据可视化模板</title>
+
+</head>
+<body>
+	<header id="header">
+		<h3 class="header-title">大屏数据可视化模板</h3>
+		<div class="header-info header-info-l">数据来源：大数据研究院</div>
+		<div class="header-info header-info-r">更新日期：<span id="date_now"/></div>
+	</header>
+
+	<div id="container">
+		<div id="flexCon" style="height: 100%;width: 100%;min-height: 600px;min-width: 1200px;overflow: hidden;">
+			<div class="flex-row" >
+				<div class="flex-cell flex-cell-l">
+					<div class="chart-wrapper" >
+						<h3 class="chart-title">图表</h3>
+						<div class="chart-div">
+							<div class="chart-loader">
+								<div class="loader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex-cell flex-cell-c">
+					<div class="chart-wrapper">
+						<h3 class="chart-title"></h3>
+						<div class="chart-div chart-done"></div>
+					</div>
+				</div>
+				<div class="flex-cell flex-cell-r">
+					<div class="chart-wrapper">
+						<h3 class="chart-title"></h3>
+						<div class="chart-div chart-done">
+							<div class="chart-loader">
+								<div class="loader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-row">
+				<div class="flex-cell flex-cell-lc">
+					<div class="chart-wrapper">
+						<h3 class="chart-title"></h3>
+						<div class="chart-div chart-done">
+							<div class="chart-loader">
+								<div class="loader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex-cell flex-cell-r">
+					<div class="chart-wrapper">
+						<h3 class="chart-title"></h3>
+						<div class="chart-div chart-done">
+							<div class="chart-loader">
+								<div class="loader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer">版权所有@<span id="years_now"/></footer>
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="plugins/jquery-3.5.1/jquery.min.js"></script>
+<script src="plugins/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+<script src="plugins/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script>
+<!-- 引入echart js文件 -->
+<script src="plugins/echarts-4.9.0/dist/echarts.min.js"></script>
+<script src="plugins/echarts-4.9.0/map/js/china.js"></script>
+<script src="plugins/echarts-4.9.0/theme/shine.js"></script>
+
+<script src="dist/js/adminlte.min.js"></script>
+<!-- 自定义js脚本 -->
+<script type="text/javascript">
+	/*赋值授权时间*/
+	$(function () {
+		const now = new Date();
+		const year = now.getFullYear();
+		$("#years_now").html(year);
+		$("#date_now").html(now.toLocaleDateString());}
+		)
+
+    // 1.获取div元素
+    const myecharts = echarts.init(document.getElementById('main2'), "shine");
+    // 2.引入操作
+    var option = {};
+    // 3.设置操作
+    myChart.setOption(option);
+</script>
+
+</html>
