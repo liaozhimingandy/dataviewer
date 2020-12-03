@@ -62,3 +62,8 @@
 
 ## 卡片式参考模板
 case12结合bootstrap4及echarts
+
+------
+
+更多案例请关注:[liaozhimingandy/dataviewer: 大屏数据展示 (github.com)](https://github.com/liaozhimingandy/dataviewer)
+
